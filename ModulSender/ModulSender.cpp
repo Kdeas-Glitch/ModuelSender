@@ -22,7 +22,7 @@ int Connect() {
     // Initialize Winsock
     iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
     if (iResult != 0) {
-        printf((char*)WSAGetLastError());
+        std::cout << WSAGetLastError() << std::endl;
         printf("WSAStartup failed: %d\n", iResult);
         return 1;
     }
@@ -64,7 +64,7 @@ int Connect() {
 
     freeaddrinfo(result);
     if (ConnectSocket == INVALID_SOCKET) {
-        printf((char*)WSAGetLastError());
+        std::cout << WSAGetLastError() << std::endl;
         //printf("Не получилось подключится к серверу!\n");
         WSACleanup();
         int a = _getch();
@@ -79,7 +79,7 @@ int main()
 {
     setlocale(0, "rus");
     if (Connect() == 1) {
-        printf((char*)WSAGetLastError());
+        std::cout << WSAGetLastError() << std::endl;
         _getch();
     };
 
