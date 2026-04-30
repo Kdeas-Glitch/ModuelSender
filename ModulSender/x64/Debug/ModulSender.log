@@ -1,3 +1,4 @@
 ﻿  ModulSender.cpp
+C:\Users\User\source\repos\ModulSender\ModulSender\ModulSender.cpp(88,18): warning C5056: Оператор "!=": не рекомендуется для типов массивов.
 C:\Users\User\source\repos\ModulSender\ModulSender\ModulSender.cpp(76,1): warning C4715: Connect: значение возвращается не при всех путях выполнения
   ModulSender.vcxproj -> C:\Users\User\source\repos\ModulSender\x64\Debug\ModulSender.exe
