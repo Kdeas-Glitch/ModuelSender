@@ -84,7 +84,7 @@ int main()
         _getch();
     };
     std::cout << "OK" << std::endl;
-    char line[2048] = "test,host,123456asd";
+    char line[2048] = "test,host=pc1,value=123456asd";
     iResult = send(ConnectSocket, line, (int)strlen(line), 0);
     if (iResult == SOCKET_ERROR) {
         printf("send failed: %d\n", WSAGetLastError());
