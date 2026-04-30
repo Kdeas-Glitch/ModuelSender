@@ -89,7 +89,7 @@ int main()
         std::cin >> enter;
         char comb[255];
         char line[2048] = "test,host=pc1 value=";
-        sprintf_s(comb, sizeof(comb), "[%s]: %s%s", line, comb,"\n");
+        sprintf_s(comb, sizeof(comb), "[%s]: \"%s\"%s", line, comb,"\n");
         iResult = send(ConnectSocket, line, (int)strlen(line), 0);
         if (iResult == SOCKET_ERROR) {
             printf("send failed: %d\n", WSAGetLastError());
