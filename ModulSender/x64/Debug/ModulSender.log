@@ -1,0 +1,4 @@
+﻿  ModulSender.cpp
+C:\Users\User\source\repos\ModulSender\ModulSender\ModulSender.cpp(80,16): warning C4312: приведение типов: преобразование из "int" в "char *" большего размера
+C:\Users\User\source\repos\ModulSender\ModulSender\ModulSender.cpp(73,1): warning C4715: Connect: значение возвращается не при всех путях выполнения
+  ModulSender.vcxproj -> C:\Users\User\source\repos\ModulSender\x64\Debug\ModulSender.exe

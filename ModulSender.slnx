@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="ModulSender/ModulSender.vcxproj" Id="16c601bc-ff74-4a50-a869-0e57b554caf7" />
+</Solution>
