@@ -60,16 +60,17 @@ int Connect() {
     if (iResult == SOCKET_ERROR) {
         closesocket(ConnectSocket);
         ConnectSocket = INVALID_SOCKET;
+        return 1;
     }
 
     freeaddrinfo(result);
     if (ConnectSocket == INVALID_SOCKET) {
         std::cout << WSAGetLastError() << std::endl;
         //printf("Не получилось подключится к серверу!\n");
-        WSACleanup();
         int a = _getch();
         return 1;
     }
+    std::cout << "SuperOK" << std::endl;
     int timeout = 100;
     setsockopt(ConnectSocket, SOL_SOCKET, SO_SNDTIMEO, (const char*)&timeout, sizeof(timeout));
 }
@@ -82,7 +83,7 @@ int main()
         std::cout << WSAGetLastError() << std::endl;
         _getch();
     };
-
+    std::cout << "OK" << std::endl;
     char line[2048] = "test,host,123456asd";
     iResult = send(ConnectSocket, line, (int)strlen(line), 0);
     if (iResult == SOCKET_ERROR) {
